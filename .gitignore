@@ -1,0 +1,18 @@
+# Environment
+.env
+
+# Python
+*.pyc
+__pycache__/
+*.egg-info/
+.venv/
+venv/
+google-vision-key.json
+temp_*
+*.log
+
+# Node
+node_modules/
+dist/
+
+

@@ -1,0 +1,11 @@
+flask==3.0.3
+flask-cors==4.0.1
+pymongo==4.7.2
+python-dotenv==1.0.1
+werkzeug==3.0.3
+PyJWT==2.8.0
+requests==2.32.3
+gtts==2.5.1
+cloudinary==1.40.0
+pymupdf==1.24.5
+gunicorn==22.0.0
