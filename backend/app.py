@@ -7,7 +7,7 @@ load_dotenv()
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
-CORS(app, origins=["http://localhost:5173"])
+CORS(app)
 
 from routes.auth import auth_bp
 from routes.document import document_bp
