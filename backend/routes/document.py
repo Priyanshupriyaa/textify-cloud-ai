@@ -1,8 +1,8 @@
 from flask import Blueprint, request, jsonify, send_file
-from backend.utils.auth_utils import token_required
-from backend.services.ai_service import extract_text_from_image, summarize_text, text_to_speech
-from backend.services.storage import upload_file
-from backend.models.db import documents_collection, users_collection
+from utils.auth_utils import token_required
+from services.ai_service import extract_text_from_image, summarize_text, text_to_speech
+from services.storage import upload_file
+from models.db import documents_collection, users_collection
 from bson import ObjectId
 import datetime
 import io
