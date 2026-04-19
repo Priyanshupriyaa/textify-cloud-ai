@@ -1,7 +1,7 @@
 from flask import Blueprint, request, jsonify
 from werkzeug.security import generate_password_hash, check_password_hash
-from backend.models.db import users_collection
-from backend.utils.auth_utils import generate_token
+from models.db import users_collection
+from utils.auth_utils import generate_token
 from bson import ObjectId
 import re
 
@@ -114,7 +114,7 @@ def login():
 
 @auth_bp.route("/me", methods=["GET"])
 def me():
-    from backend.utils.auth_utils import token_required
+    from utils.auth_utils import token_required
     token = request.headers.get("Authorization", "").replace("Bearer ", "")
     if not token:
         return jsonify({"error": "No token"}), 401
