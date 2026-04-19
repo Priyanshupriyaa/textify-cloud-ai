@@ -9,8 +9,8 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
 CORS(app, origins=["http://localhost:5173"])
 
-from backend.routes.auth import auth_bp
-from backend.routes.document import document_bp
+from routes.auth import auth_bp
+from routes.document import document_bp
 
 app.register_blueprint(auth_bp, url_prefix='/api/auth')
 app.register_blueprint(document_bp, url_prefix='/api/document')
